@@ -1,12 +1,10 @@
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import Group, User
 from rest_framework import viewsets
-from luizalabs.employees.models import Employee, Department
-from luizalabs.employees.serializers import (
-    DepartmentSerializer,
-    EmployeeSerializer,
-    GroupSerializer,
-    UserSerializer,
-)
+
+from luizalabs.employees.models import Department, Employee
+from luizalabs.employees.serializers import (DepartmentSerializer,
+                                             EmployeeSerializer,
+                                             GroupSerializer, UserSerializer)
 
 
 class UserViewSet(viewsets.ModelViewSet):

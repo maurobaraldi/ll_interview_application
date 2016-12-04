@@ -1,6 +1,7 @@
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import Group, User
 from rest_framework import serializers
-from luizalabs.employees.models import Employee, Department
+
+from luizalabs.employees.models import Department, Employee
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
