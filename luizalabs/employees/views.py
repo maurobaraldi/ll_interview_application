@@ -30,7 +30,7 @@ class GroupViewSet(viewsets.ModelViewSet):
 class EmployeeViewSet(viewsets.ModelViewSet):
     """"Groups API endpoints."""
 
-    queryset = Employee.objects.all()
+    queryset = Employee.objects.select_related('department').all()
     serializer_class = EmployeeSerializer
 
     def get_serializer_context(self):
